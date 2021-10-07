@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  get-emr:
+    build: ./get
+    ports:
+      - "3000:3000"
+  post-emr:
+    build: ./post
+    ports:
+      - "3001:3001"

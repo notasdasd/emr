@@ -1,0 +1,7 @@
+FROM node:15.14.0
+RUN npm install -g json-server
+
+WORKDIR /data
+COPY get.json /data
+
+CMD ["json-server", "--watch", "get.json", "--host", "0.0.0.0", "--port","3000"]
